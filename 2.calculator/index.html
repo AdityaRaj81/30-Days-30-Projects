@@ -7,73 +7,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="display">
-            <input type="text" name="" id="screen" placeholder="0">
+    <div class="main-container">
+        <div class="container">
+            <div class="display">
+                <input type="text" id="screen" placeholder="0">
+            </div>
+            <div class="btns">
+                <div class="row">
+                    <button id="ce" onclick="backspc()">CE</button>
+                    <button onclick="fact()">x!</button>
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button class="btn">%</button>
+                    <button id="ac" onclick="clearScreen()">AC</button>
+                </div>
+                <div class="row">
+                    <button onclick="sin()">sin</button>
+                    <button onclick="pi()">π</button>
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">÷</button>
+                </div>
+                <div class="row">
+                    <button onclick="cos()">cos</button>
+                    <button onclick="log()">log</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">x</button>
+                </div>
+                <div class="row">
+                    <button onclick="tan()">tan</button>
+                    <button onclick="sqrt()">√</button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">-</button>
+                </div>
+                <div class="row">
+                    <button onclick="e()">e</button>
+                    <button onclick="pow()">x<span style="position: relative; bottom: .4em; right: .1em;">2</span></button>
+                    <button class="btn">0</button>
+                    <button class="btn">.</button>
+                    <button id="eval" onclick="evaluateExpression()">=</button>
+                    <button class="btn">+</button>
+                </div>
+            </div>
         </div>
-        <div class="btns">
-            <div class="row">
-                <button id="ce" onclick="backspc()">CE</button>
-                <button onclick="fact()">x!</button>
-                <button class="btn">(</button>
-                <button class="btn">)</button>
-                <button class="btn">%</button>
-                <button id="ac" onclick="screen.value=''">AC</button>
-            </div>
-            <div class="row">
-                <button onclick="sin()">sin</button>
-                <button onclick="pi()">pi</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">÷</button>
-            </div>
-            <div class="row">
-                <button onclick="cos()">cos</button>
-                <button onclick="log">log</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">x</button>
-            </div>
-            <div class="row">
-                <button onclick="tan()">tan</button>
-                <button onclick="sqrt()">√</button>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">-</button>
-            </div>
-            <div class="row">
-                <button onclick="e()">e</button>
-                <button onclick="pow()">x<span style="position: relative; button: .4en; right: .1em;"></span></button>
-                <button class="btn">0</button>
-                <button class="btn">.</button>
-                <button class="btn">=</button>
-                <button class="btn">+</button>
-            </div>
-        </div>
+        <h2><span>SCIENTIFIC</span><br>CALCI</h2>
     </div>
-    
+    <script src="script.js"></script>
 </body>
-
-<script>
-    var screen-document.querySelector('#screen');
-    var btn = document.querySelectorAll('.btn');
-
-    for(item of btn){
-        item.addEventListener('click',(e)=>{
-            btntext=e.target.innerText;
-            if(btntext=='x'){
-                btntext='*';
-            }
-            if(btntext=='÷'){
-                btntext='/';
-            }
-            screen.value+=btntext;
-        });
-    }
-</script>
-
 </html>
