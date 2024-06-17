@@ -19,7 +19,7 @@ Each project in this repository is intended to be simple yet informative, helpin
 ## Project List
 
 1. **Day 1**: Weather App with API
-2. **Day 2**: 
+2. **Day 2**: Scientific Calculator <a href="https://calci-by-aditya.netlify.app/" target="_blank"> check_here</a>.
 3. **Day 3**: 
 4. **Day 4**: 
 5. **Day 5**: 
