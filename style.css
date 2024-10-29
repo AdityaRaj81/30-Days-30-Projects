@@ -14,21 +14,64 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
+/* Header with Background */
 header {
+  position: relative;
   text-align: center;
-  padding: 30px 20px;
-  background-color: #333;
+  padding: 60px 20px;
   color: #fff;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./background.jpg') center/cover no-repeat;
+  opacity: 0.6; /* Overlay effect */
+  z-index: 1;
 }
 
-header p {
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animated Text */
+.fade-in {
+  font-size: 2.5em;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.slide-up {
   font-size: 1.2em;
+  opacity: 0;
+  animation: slideUp 2s forwards;
+}
+
+.scroll-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1em;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Project Showcase Section */
@@ -36,14 +79,15 @@ header p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
+  background-color: lightslategray;
 }
 
 /* Project Card */
 .project-card {
-  width: 300px;
+  width: 200px;
   background-color: #fff;
-  padding: 15px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
