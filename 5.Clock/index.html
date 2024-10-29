@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="analog-clock-container">
+            <h2 class="heading">Analog Clock</h2>
+            <div class="clock">
+                <div class="hour">
+                    <div class="hr" id="hr"></div>
+                </div>
+                <div class="min">
+                    <div class="mn" id="mn"></div>
+                </div>
+                <div class="sec">
+                    <div class="sc" id="sc"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="digital-clock-container">
+            <div class="digital-clock">
+                <h2 class="heading">Digital Clock</h2>
+                <div id="digitalTime"></div>
+                <button id="toggleFormat">Switch to 24-hour</button>
+            </div>
+            <div class="date-time">
+                <p id="day"></p>
+                <br>
+                <p id="date"></p>
+            </div>
+            <button id="themeToggle">Change Theme</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created with ❤️ by Aditya</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

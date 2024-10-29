@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #19172e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.3s;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.analog-clock-container,
+.digital-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 100px; */
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('assets/clock.png') no-repeat center/cover;
+  
+  border-radius: 50%;
+}
+
+.clock .hour, .clock .min, .clock .sec {
+  position: absolute;
+
+}
+
+.hr, .mn, .sc {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hr:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 80px;
+  background: #bb86fc;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #fff;
+  border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: #70efde;
+  border-radius: 6px 6px 0 0;
+}
+
+.digital-clock {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#digitalTime {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#toggleFormat, #themeToggle {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#toggleFormat {
+  background-color: #000000;
+  color: #fbfbfc;
+}
+
+#themeToggle {
+  background-color: #bb86fc;
+  color: #19172e;
+}
+
+/* Light Theme */
+.light-theme {
+  --background-color: #00fd4c;
+  --primary-text-color: #333333;
+  --secondary-text-color: #3A86FF;
+  --button-background-color: #FFBE0B;
+  --button-text-color: #333333;
+  --hour-hand-color: #3A86FF;
+  --minute-hand-color: #333333;
+  --second-hand-color: #FFBE0B;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --background-color: #19172e;
+  --primary-text-color: #FFFFFF;
+  --secondary-text-color: #BB86FC;
+  --button-background-color: #70EFDE;
+  --button-text-color: #19172e;
+  --hour-hand-color: #BB86FC;
+  --minute-hand-color: #FFFFFF;
+  --second-hand-color: #70EFDE;
+}
+
+/* Applying Theme Variables */
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+}
+
+.hr:before {
+  background-color: var(--hour-hand-color);
+}
+
+.mn:before {
+  background-color: var(--minute-hand-color);
+}
+
+.sc:before {
+  background-color: var(--second-hand-color);
+}
+
+
+.date-time {
+  text-align: center;
+  margin: 10px 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
