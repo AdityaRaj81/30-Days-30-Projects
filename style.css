@@ -1,0 +1,133 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body and Page Styling */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Project Showcase Section */
+.project-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Project Card */
+.project-card {
+  width: 300px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Container */
+.project-image-container {
+  width: 100%;
+  height: 180px; /* Set a fixed height for uniformity */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the container without stretching */
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0 5px;
+}
+
+.project-card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show the button when user scrolls */
+.back-to-top.show {
+  display: flex;
+}
