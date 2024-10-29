@@ -3,17 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My To-Do List</title>
+  <title>Enhanced To-Do List</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="todo-app">
-      <div>
-        <h2>Welcome To My To List</h2>
+      <div class="header">
+        <h2><img src="images/icon.png" alt="icon"> To-Do List</h2>
+        <div id="progress-circle">
+          <span id="progress-text">0%</span>
+        </div>
       </div>
-      
+      <div class="input-row">
+        <input type="text" id="input-box" placeholder="Add a new task...">
+        <button id="add-btn">Add</button>
+      </div>
+      <ul id="list-container"></ul>
+      <button id="clear-btn">Clear All Tasks</button>
     </div>
-  </div>  
+    <footer>
+      <p>Developed by Aditya Raj</p>
+      <div class="datetime" id="datetime">
+        <span id="current-date"></span> | <span id="current-time"></span>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
