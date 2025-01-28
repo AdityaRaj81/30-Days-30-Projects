@@ -181,3 +181,69 @@ body {
         font-size: 28px;
     }
 }
+
+
+footer {
+    position: relative;
+    background: #1e272e;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 25px 20px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* Typing Animation */
+  #dynamic-text {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    color: #39ff14;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #39ff14;
+    display: inline-block;
+    animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  /* Social Media Icons */
+  .social-icons {
+    margin-top: 20px;
+  }
+  .social-icons :hover{
+    transform: scale(1.5); /* Increases size by 1.5 times */
+  }
+  .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #39ff14;
+    transform: scale(1.2);
+  }
+  /* Footer Text */
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  /* Copyright */
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+  }
