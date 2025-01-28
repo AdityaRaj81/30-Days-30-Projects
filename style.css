@@ -40,15 +40,16 @@ header {
 
 /* Animated Text */
 .fade-in {
-  font-size: 2.5em;
+  font-size: 40px; /* Uniform size in px */
   opacity: 0;
   animation: fadeIn 1.5s forwards;
 }
 
 .slide-up {
-  font-size: 1.2em;
+  font-size: 20px; /* Uniform size in px */
   opacity: 0;
   animation: slideUp 2s forwards;
+  color: black;
 }
 
 .scroll-btn {
@@ -60,7 +61,7 @@ header {
   border-radius: 20px;
   cursor: pointer;
   outline: none;
-  font-size: 1em;
+  font-size: 16px; /* Uniform size in px */
 }
 
 /* Animation Keyframes */
@@ -102,7 +103,7 @@ header {
 /* Image Container */
 .project-image-container {
   width: 100%;
-  height: 180px; /* Set a fixed height for uniformity */
+  height: 180px; /* Fixed height for uniformity */
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -111,17 +112,17 @@ header {
 .project-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image covers the container without stretching */
+  object-fit: cover;
 }
 
 /* Project Title */
 .project-card h3 {
-  font-size: 1.2em;
+  font-size: 20px;
   margin: 10px 0 5px;
 }
 
 .project-card p {
-  font-size: 0.9em;
+  font-size: 14px; /* Uniform size in px */
   color: #555;
 }
 
@@ -132,11 +133,16 @@ footer {
   padding: 20px 0;
   text-align: center;
   position: relative;
+  margin-bottom: 0; /* Ensures no extra space at the bottom */
+}
+
+.footer-content {
+  margin: 0; /* Removes extra margin */
 }
 
 .footer-content p {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 14px; /* Uniform size in px */
 }
 
 .footer-links {
@@ -153,10 +159,67 @@ footer {
   color: #3498db;
 }
 
+/* Social Icons */
+.social-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0; /* Ensures no extra space below social icons */
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 10px 0; /* Reduced margin to minimize space */
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 10px; /* Reduced space between icons */
+  position: relative;
+  font-size: 25px; /* Uniform size in px */
+}
+
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons a:before {
+  content: " ";
+  transform: scale(1);
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #00B5F5, #002A8F);
+  transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+  transform: scale(2.2);
+  color: #00B5F5;
+  background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
 /* Back-to-Top Button */
 .back-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   background-color: #3498db;
   color: #fff;
@@ -169,9 +232,9 @@ footer {
   display: none; /* Initially hidden */
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
-/* Show the button when user scrolls */
 .back-to-top.show {
   display: flex;
 }
