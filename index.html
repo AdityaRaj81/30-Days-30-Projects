@@ -6,6 +6,7 @@
   <link rel="icon" href="./images.png"type="image/x-icon" />
   <title>30 Days, 30 Projects</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 </head>
 <body>
 
@@ -15,8 +16,8 @@
     <div class="header-content">
       <h1 class="fade-in">30 Days, 30 Projects </h1>
       <p class="slide-up">Explore 30 unique web projects created by Aditya Raj</p>
-      <p>This showcase features a diverse range of web applications designed to enhance your experience, from utilities like calculators to interactive tools like to-do lists. Each project highlights different aspects of web development, demonstrating skills in HTML, CSS, and JavaScript.</p>
-      <p>Join me on this journey of creativity and innovation as I build a new project every day for 30 consecutive days. Click on any project below to see the details and explore the functionality!</p>
+      <p style="color: black; margin-left: 10%; margin-right: 10%;">This showcase features a diverse range of web applications designed to enhance your experience, from utilities like calculators to interactive tools like to-do lists. Each project highlights different aspects of web development, demonstrating skills in HTML, CSS, and JavaScript.</p>
+      <p style="color: black; margin-left: 10%; margin-right: 10%;">Join me on this journey of creativity and innovation as I build a new project every day for 30 consecutive days. Click on any project below to see the details and explore the functionality!</p>
       <!-- <button class="scroll-btn" onclick="scrollToSection('project-showcase')">Discover Projects</button> -->
     </div>
   </header>
@@ -63,10 +64,10 @@
       </div>
     </a>
 
-    <a href="./2.calculator/index.html" target="_blank" class="project-link">
+    <a href="./5.Clock/index.html" target="_blank" class="project-link">
       <div class="project-card">
         <div class="project-image-container">
-          <img src="./2.calculator/Calci_Screenshot_.png" alt="Project 2">
+          <img src="./5.Clock/assets/clock.png" alt="Project 2">
         </div>
         <h3>Project 5: Calculator</h3>
         <!-- <p>Simple Calculator with basic arithmetic functions</p> -->
@@ -117,17 +118,26 @@
   </div>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>Made with ❤️ by Aditya Raj | &copy; 2024 All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#about">About Me</a>
-        <a href="#contact">Contact Me</a>
-        <a href="#projects">Projects</a>
-      </div>
+<footer>
+  <div class="footer-content">
+    <p>Made with ❤️ by Aditya Raj | &copy; 2024 All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#about" onclick="scrollToSection('about')">About Me</a>
+      <a href="#contact" onclick="scrollToSection('contact')">Contact Me</a>
+      <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
+    </div>
+    <div class="social-container">
+      <ul class="social-icons">
+        <li><a href="https://instagram.com/AdityaRaj_81" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/AdityaRaj_81" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://linkedin.com/in/AdityaRaj81" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/AdityaRaj81" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
     </div>
     <button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
-  </footer>
+  </div>
+</footer>
+
 
   <script src="script.js"></script>
 </body>
