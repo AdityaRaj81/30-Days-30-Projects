@@ -47,7 +47,9 @@ Each project in this repository is intended to be simple yet informative, helpin
 27. **Day 27**: 
 28. **Day 28**: 
 29. **Day 29**: 
-30. **Day 30**: 
+30. **Day 30**:
+
+    Bonous : <a href="[https://weather-check-by-aditya.netlify.app/](https://smokeheart.netlify.app/)" target="_blank">Bonous</a>.
 
 ## Contact
 Aditya Raj - connect2rajaditya@gmail.com Linkdin
