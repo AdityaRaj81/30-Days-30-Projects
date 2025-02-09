@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch, Timer, and Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="date-time">
+                <span id="currentDate"></span>
+                <span id="currentDay"></span>
+                <span id="currentTime"></span>
+            </div>
+            <div class="theme-controls">
+                <button id="timeFormatToggle">Switch to 24 Hour</button>
+                <button id="themeToggle">Switch to Dark Theme</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="stopwatch-section">
+                <h2>Stopwatch</h2>
+                <div id="stopwatchDisplay">00:00:00.000</div>
+                <div class="stopwatch-buttons">
+                    <button id="startStopwatch">Start</button>
+                    <button id="splitStopwatch">Split</button>
+                    <button id="stopStopwatch">Stop</button>
+                    <button id="resetStopwatch">Reset</button>
+                </div>
+                <div id="splitTimes"></div>
+            </section>
+
+            <section class="timer-section">
+                <h2>Timer</h2>
+                <div id="timerDisplay">00:00:00</div>
+                <input type="number" id="timerInput" placeholder="Enter time in seconds" min="1">
+                <div class="timer-buttons">
+                    <button id="startTimer">Start Timer</button>
+                    <button id="stopTimer">Stop Timer</button>
+                    <button id="resetTimer">Reset Timer</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Created by Aditya Raj - 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
