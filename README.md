@@ -50,6 +50,7 @@ Each project in this repository is intended to be simple yet informative, helpin
 30. **Day 30**: 
 
 ## Contact
-Aditya Raj - connect2rajaditya@gmail.com
+Aditya Raj - connect2rajaditya@gmail.com Linkdin
+
 
 GitHub Repo: https://github.com/AdityaRaj81/30-Days-30-Projects
