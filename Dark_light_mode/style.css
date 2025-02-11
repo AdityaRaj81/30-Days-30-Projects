@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: #0f0c27;
+}
+
+.dark-theme{
+    --primary-color:#0f0c27;
+    --secondary-color:#white;
+}
+
+body{
+    background: var(--secondary-color);
+}
+
+.container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon{
+    cursor: pointer;
+    width: 15px;
+    padding: 20px;
+}
+
+#modeText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+body.dark-theme #modeText {
+    color: #0f0c27;
+}
+
