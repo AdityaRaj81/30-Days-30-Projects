@@ -23,6 +23,98 @@
     </div>
 
 
+
+
+    <footer>
+        <!-- Typing Animation -->
+        <h2><span id="dynamic-text"></span></h2>
+        <p>Code brewed by <b> Aditya Raj </b> ☕✨</p>
+    
+        <!-- Social Media Links -->
+        <div class="social-icons">
+          <a href="https://github.com/adityaraj81" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/adityaraj81" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/adityaraj_81" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/adityaraj_81" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/adityaraj812" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="mailto:connect2rajaditya@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+            <!-- Copyright -->
+        <p class="footer-copyright">&copy; 2025 All rights reserved.</p>
+      </footer>
+
+      <script>
+        const texts = [
+            "Where logic meets creativity 💡🎨",
+          "Innovation is powered by passion! 🔥",
+          "Code with a touch of creativity 💡",
+          "Building ideas, one line of code at a time 🚀",
+          "Code the future with every keystroke ⚡",
+          "Turning coffee into code, one line at a time ☕💻",
+          "Every line of code is a step closer to greatness 🚀",
+          "Developing ideas into reality, one bug at a time 🐞",
+          "Coding is the art of solving problems 🎨🛠️",
+          "Building the future, one algorithm at a time 🔧💻",
+          "The beauty of code is in its simplicity 💎",
+          "Creativity in code, precision in execution 🎯",
+          "Unlocking possibilities with every line of code 🔐",
+          "Shaping tomorrow with the power of code 🔮",
+          "Code, create, and innovate – that's the mantra 🌟",
+          "From code to reality, the journey begins here 🚗💻",
+          "Empowering ideas with technology ⚙️",
+          "Every line of code has a story to tell 📖"
+        ];
+    
+        let currentText = 0;
+const typingElement = document.getElementById("dynamic-text");
+let typingSpeed = 150; // Speed of typing (milliseconds)
+let erasingSpeed = 100; // Speed of erasing (milliseconds)
+let pauseBetweenText = 4000; // Pause between text change (milliseconds)
+
+function typeAndErase() {
+  let text = texts[currentText];
+  let i = 0;
+  let isErasing = false;
+
+  function typeWriter() {
+    if (!isErasing) {
+      // Clear the content at the start of typing phase (prevent extra cursor issue)
+      if (i === 0) {
+        typingElement.innerHTML = "";
+      }
+
+      // Typing phase
+      if (i < text.length) {
+        typingElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, typingSpeed);
+      } else {
+        // After typing is complete, start erasing
+        isErasing = true;
+        setTimeout(typeWriter, pauseBetweenText);
+      }
+    } else {
+      // Erasing phase
+      if (i > 0) {
+        typingElement.innerHTML = text.substring(0, i - 1);
+        i--;
+        setTimeout(typeWriter, erasingSpeed);
+      } else {
+        // After erasing is complete, switch to the next text
+        currentText = (currentText + 1) % texts.length;
+        isErasing = false;
+        setTimeout(typeAndErase, pauseBetweenText);
+      }
+    }
+  }
+  typeWriter();
+}
+
+typeAndErase(); // Start the typing and erasing cycle
+
+      </script>
+
+
     <!--JS File-->
     <script src="./script.js"></script>
 </body>
