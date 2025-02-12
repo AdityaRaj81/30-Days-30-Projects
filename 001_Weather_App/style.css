@@ -182,72 +182,57 @@ body {
     }
 }
 
-
-footer {
-    position: relative;
-    background: #1e272e;
-    color: #f5f5f5;
+/* Footer */
+.custom-footer {
+    width: 100%;
+    background: linear-gradient(45deg, #1e4772, #822a98); /* Unique two-color gradient */
     text-align: center;
-    padding: 25px 20px;
-    overflow: hidden;
-    z-index: 1;
+    padding: 20px 10px;
   }
-
-  /* Typing Animation */
-  #dynamic-text {
-    font-family: 'Courier New', monospace;
-    font-size: 24px;
-    font-weight: bold;
-    color: #39ff14;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #39ff14;
-    display: inline-block;
-    animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
-  }
-  #dynamic-text:not(:empty) {
-    border-right-color: #39ff14; /* Show cursor only when there's content */
-    animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
-  }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-  /* Social Media Icons */
-  .social-icons {
-    margin-top: 20px;
-  }
-  .social-icons :hover{
-    transform: scale(1.5); /* Increases size by 1.5 times */
-  }
-  .social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 24px;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  .social-icons a:hover {
-    color: #39ff14;
-    transform: scale(1.2);
-  }
-  /* Footer Text */
-  p {
-    font-size: 16px;
+  .footer-buttons, .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin: 10px 0;
   }
-  /* Copyright */
-  .footer-copyright {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #aaa;
+  .footer-buttons a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #b0ff41, #ff2bdc);
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .footer-buttons a:hover {
+    color: red;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 50px rgba(28, 255, 126, 0.8);
+  }
+  .footer-social a {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .footer-social a:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 4.5);
+  }
+  .facebook { background: #3b5998; color: white; }
+  .twitter { background: #1da1f2; color: white; }
+  .instagram { background: #e4405f; color: white; }
+  .linkedin { background: #0077b5; color: white; }
+  .github { background: #333; color: white; }
+  .footer-text {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: bold;
   }
